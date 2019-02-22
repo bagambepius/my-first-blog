@@ -1,0 +1,21 @@
+{% extends "base_temp.html" %}
+
+	{% block content %}
+
+	<h4> List of Authors </h4>
+
+		{% if author_list %}
+			{% for author in author_list %}
+
+			<li><a href="{{ author.get_absolute_url }}">{{author.First_Name}}</a>{{author.Last_Name}} </li>
+
+			{% endfor %}
+
+			{% else %}
+
+				<p>No Authors currently </p>
+
+		{% endif %}
+
+
+	{% endblock %}
